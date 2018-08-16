@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <!--<item name="tabBackground">@drawable/tab_selector</item>-->
+        <item name="tabMode">fixed</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabTextAppearance">@style/TabLayoutText</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="TabLayoutText" parent="TextAppearance.Design.Tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
