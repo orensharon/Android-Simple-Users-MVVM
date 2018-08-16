@@ -8,22 +8,13 @@ import java.util.List;
 
 public class ViewPagerBindingAdapter extends FragmentPagerAdapter {
 
-    public interface OnItemClickListener {
-        void onItemClick(Fragment fragment);
-    }
+    private List<Fragment> tabs;
+    private String[] tabTitles;
 
-    private int holderLayout, variableId;
-    protected List<Fragment> tabs;
-
-    private OnItemClickListener onItemClickListener;
-
-    public ViewPagerBindingAdapter(FragmentManager fm, List<Fragment> tabs) {
+    public ViewPagerBindingAdapter(FragmentManager fm, List<Fragment> tabs, String[] tabTitles) {
         super(fm);
         this.tabs = tabs;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
+        this.tabTitles = tabTitles;
     }
 
     @Override
@@ -34,5 +25,10 @@ public class ViewPagerBindingAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return tabs.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return this.tabTitles[position];
     }
 }

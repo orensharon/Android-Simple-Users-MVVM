@@ -3,10 +3,11 @@ package com.soren.androidmvvm.view_model;
 
 import android.support.v4.app.Fragment;
 
-import com.soren.androidmvvm.binding.fields.TabLayoutConfiguration;
 import com.soren.androidmvvm.view.MainActivity;
-import com.soren.androidmvvm.view.adapter.ViewPagerBindingAdapter;
-import com.soren.androidmvvm.view.base.BaseActivityViewModel;
+import com.soren.androidmvvm.view.users.UsersFragment;
+import com.soren.mvvm_base.binding.fields.TabLayoutConfiguration;
+import com.soren.mvvm_base.view.adapter.ViewPagerBindingAdapter;
+import com.soren.mvvm_base.view_model.base.BaseActivityViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,23 +16,19 @@ public class MainActivityVM extends BaseActivityViewModel<MainActivity> {
 
     public final TabLayoutConfiguration tabLayoutConfiguration;
 
+    private List<Fragment> tabs;
 
     public MainActivityVM(MainActivity activity) {
         super(activity);
         this.tabLayoutConfiguration = new TabLayoutConfiguration();
-    }
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
         this.initTabs();
     }
 
     private void initTabs() {
-        List<Fragment> tabs = new ArrayList<>();
-        tabs.add(new Fragment());
-        tabs.add(new Fragment());
-        ViewPagerBindingAdapter adapter = new ViewPagerBindingAdapter(getActivity().getSupportFragmentManager(), tabs);
-        this.tabLayoutConfiguration.setAdapter(adapter);
+        this.tabs = new ArrayList<>();
+        this.tabs.add(UsersFragment.getInstance());
+        this.tabs.add(UsersFragment.getInstance());
+        String[] tabTitles = new String[] { "Users", "Me" };
+        this.tabLayoutConfiguration.setAdapter(new ViewPagerBindingAdapter(getActivity().getSupportFragmentManager(), this.tabs, tabTitles));
     }
 }

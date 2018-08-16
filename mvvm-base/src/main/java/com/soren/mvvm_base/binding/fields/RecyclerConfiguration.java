@@ -59,6 +59,8 @@ public class RecyclerConfiguration extends BaseObservable {
         recyclerView.setLayoutManager(configuration.getLayoutManager());
         recyclerView.setItemAnimator(configuration.getItemAnimator());
         recyclerView.setAdapter(configuration.getAdapter());
-        recyclerView.addItemDecoration(configuration.getDecoration());
+        if (configuration.getDecoration() != null) {
+            recyclerView.addItemDecoration(configuration.getDecoration());
+        }
     }
 }

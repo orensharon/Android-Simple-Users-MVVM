@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-public abstract class BaseFragmentViewModel<F extends com.soren.androidmvvm.view.base.BindingFragment> extends BaseObservable
+import com.soren.mvvm_base.view.base.BindingFragment;
+
+public abstract class BaseFragmentViewModel<F extends BindingFragment> extends BaseObservable
         implements FragmentLifeCycle {
 
     private F fragment;
