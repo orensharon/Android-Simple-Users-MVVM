@@ -1,5 +1,7 @@
 package com.soren.androidmvvm.view;
 
+import android.support.v4.app.Fragment;
+
 import com.soren.androidmvvm.R;
 import com.soren.androidmvvm.BR;
 import com.soren.androidmvvm.databinding.ActivityMainBinding;

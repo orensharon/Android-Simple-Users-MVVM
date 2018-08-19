@@ -19,12 +19,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <ImageButton
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_launcher_background"/>
+                android:id="@+id/avatar"
+                android:src="@{model.photoUrl}"/>
         </FrameLayout>
 
         <TextView
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:layout_gravity="center_vertical"
-            android:text="Sharon Oren"/>
+            android:text="@{model.name}"/>
     </LinearLayout>
 
 </layout>
