@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.view.base;
+package com.soren.mvvm_base.view.base;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
+
+import com.soren.mvvm_base.view_model.base.BaseActivityViewModel;
 
 public abstract class BindingActivity<B extends ViewDataBinding, VM extends BaseActivityViewModel> extends AppCompatActivity {
 

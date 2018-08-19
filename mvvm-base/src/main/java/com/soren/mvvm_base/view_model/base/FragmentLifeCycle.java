@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.view.base;
+package com.soren.mvvm_base.view_model.base;
 
 import android.content.Intent;
 import android.os.Bundle;

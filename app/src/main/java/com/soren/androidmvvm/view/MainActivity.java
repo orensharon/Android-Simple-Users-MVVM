@@ -1,13 +1,12 @@
 package com.soren.androidmvvm.view;
 
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
 import com.soren.androidmvvm.R;
 import com.soren.androidmvvm.BR;
-import com.soren.androidmvvm.binding.fields.TabLayoutConfiguration;
 import com.soren.androidmvvm.databinding.ActivityMainBinding;
-import com.soren.androidmvvm.view.base.BindingActivity;
 import com.soren.androidmvvm.view_model.MainActivityVM;
+import com.soren.mvvm_base.view.base.BindingActivity;
 
 public class MainActivity extends BindingActivity<ActivityMainBinding, MainActivityVM> {
 
@@ -26,9 +25,4 @@ public class MainActivity extends BindingActivity<ActivityMainBinding, MainActiv
         return R.layout.activity_main;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 }

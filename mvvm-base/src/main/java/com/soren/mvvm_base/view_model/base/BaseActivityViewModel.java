@@ -1,11 +1,11 @@
-package com.soren.androidmvvm.view.base;
+package com.soren.mvvm_base.view_model.base;
 
 import android.content.Intent;
 import android.databinding.BaseObservable;
 import android.support.v7.app.AppCompatActivity;
 
 public abstract class BaseActivityViewModel<A extends AppCompatActivity> extends BaseObservable
-        implements ActivityLifeCycle{
+        implements ActivityLifeCycle {
 
     protected A activity;
 

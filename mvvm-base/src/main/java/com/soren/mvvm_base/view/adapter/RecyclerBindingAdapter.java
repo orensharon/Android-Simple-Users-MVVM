@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.view.adapter;
+package com.soren.mvvm_base.view.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;

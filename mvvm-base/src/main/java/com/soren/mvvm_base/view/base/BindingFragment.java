@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.view.base;
+package com.soren.mvvm_base.view.base;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -10,6 +10,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.soren.mvvm_base.view_model.base.BaseFragmentViewModel;
 
 public abstract class BindingFragment<VM extends BaseFragmentViewModel, B extends ViewDataBinding>
         extends Fragment {

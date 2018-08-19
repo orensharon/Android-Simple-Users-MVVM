@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.binding.fields;
+package com.soren.mvvm_base.binding.fields;
 
 import android.databinding.BaseObservable;
 import android.databinding.BindingAdapter;
@@ -6,9 +6,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
-import com.soren.androidmvvm.BR;
-import com.soren.androidmvvm.view.adapter.ViewPagerBindingAdapter;
-
+import com.soren.mvvm_base.BR;
+import com.soren.mvvm_base.view.adapter.ViewPagerBindingAdapter;
 
 public class TabLayoutConfiguration extends BaseObservable {
 

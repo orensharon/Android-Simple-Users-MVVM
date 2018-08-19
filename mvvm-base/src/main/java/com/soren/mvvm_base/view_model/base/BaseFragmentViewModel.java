@@ -1,4 +1,4 @@
-package com.soren.androidmvvm.view.base;
+package com.soren.mvvm_base.view_model.base;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.databinding.BaseObservable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+
+import com.soren.mvvm_base.view.base.BindingFragment;
 
 public abstract class BaseFragmentViewModel<F extends BindingFragment> extends BaseObservable
         implements FragmentLifeCycle {

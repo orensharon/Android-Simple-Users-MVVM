@@ -1,11 +1,11 @@
-package com.soren.androidmvvm.binding.fields;
+package com.soren.mvvm_base.binding.fields;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.BindingAdapter;
 import android.support.v7.widget.RecyclerView;
 
-import com.soren.androidmvvm.BR;
+import com.soren.mvvm_base.BR;
 
 public class RecyclerConfiguration extends BaseObservable {
 
@@ -59,6 +59,8 @@ public class RecyclerConfiguration extends BaseObservable {
         recyclerView.setLayoutManager(configuration.getLayoutManager());
         recyclerView.setItemAnimator(configuration.getItemAnimator());
         recyclerView.setAdapter(configuration.getAdapter());
-        recyclerView.addItemDecoration(configuration.getDecoration());
+        if (configuration.getDecoration() != null) {
+            recyclerView.addItemDecoration(configuration.getDecoration());
+        }
     }
 }
